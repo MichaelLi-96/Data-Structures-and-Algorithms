@@ -11,6 +11,6 @@ class Solution {
 }
 
 /*
-	Time Complexity: O(n/2) -> O(n)
+	Time Complexity: O(n/2) -> O(n) where n is the length of the char[] s
 	Space Complexity: O(1)
 */
