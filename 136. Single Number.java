@@ -2,20 +2,26 @@
 
 class Solution {
     public int singleNumber(int[] nums) {
-        List<Integer> list = new ArrayList<>();
+        Map<Integer, Boolean> map = new HashMap<>();
         for(int num : nums) {
-            if(!list.contains(num)) {
-                list.add(num);
+            if(!map.containsKey(num)) {
+                map.put(num, false);
             }
             else {
-                list.remove(new Integer(num));
+                map.put(num, true);
             }
         }
-        return list.get(0);
+        
+        for(int num : nums) {
+            if(map.get(num) == false) {
+                return num;
+            }
+        }
+        return 0;
     }
 }
 
 /*
-	Time Complexity: O(n^2) where n is the length of the nums array (contains method takes O(n))
+	Time Complexity: O(2n) -> O(n) where n is the length of the nums array
 	Space Complexity: O(n) where n is the length of the nums array
 */
