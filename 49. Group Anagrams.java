@@ -29,5 +29,5 @@ class Solution {
 
 /*
     Time Complexity: O(n * k) where n is the length of the input strs array and k is the length of the longest string in the input strs array
-    Space Complexity: O(n) where n is the length of the input strs array
+    Space Complexity: O(n) where n is the length of the input strs array 
 */
