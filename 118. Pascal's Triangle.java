@@ -23,6 +23,7 @@ class Solution {
         return returnedList;
     }
 }
+
 /*
 	Time Complexity: O(n^2) where n is the input integer numRows
 	Space Complexity: O(n^2) where n is the input integer numRows
