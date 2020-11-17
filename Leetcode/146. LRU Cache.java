@@ -34,10 +34,7 @@ class LRUCache {
             return -1;
         }
         Node node = map.get(key);
-        Node prev = node.prev;
-        Node next = node.next;
-        prev.next = next;
-        next.prev = prev;
+        removeNode(node);
         putNodeAsMostRecent(node);
         return node.val;
     }
@@ -51,20 +48,22 @@ class LRUCache {
         else {
             Node node = map.get(key);
             node.val = value;
-            Node prev = node.prev;
-            Node next = node.next;
-            prev.next = next;
-            next.prev = prev;
+            removeNode(node);
             putNodeAsMostRecent(node);
         }
         
         if(map.size() > capacity) {
             Node lruNode = tail.prev;
-            Node prev = lruNode.prev;
-            prev.next = tail;
-            tail.prev = prev;
+            removeNode(lruNode);
             map.remove(lruNode.key);
         }
+    }
+    
+    public void removeNode(Node node) {
+        Node prev = node.prev;
+        Node next = node.next;
+        prev.next = next;
+        next.prev = prev;
     }
     
     public void putNodeAsMostRecent(Node node) {
