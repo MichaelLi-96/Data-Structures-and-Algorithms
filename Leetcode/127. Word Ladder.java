@@ -36,8 +36,6 @@ class Solution {
     }
 }
 
-O(N * M * 26 * M) = O(M^2 * N)
-
 /*
 	Time Complexity: O(n * m * 26 * m) -> O(m^2 * n) where m is the length of the input string beginWord and n is the size of the input list wordList
 	Space Complexity: O(2n) -> O(n) where n is the size of the input list wordList
