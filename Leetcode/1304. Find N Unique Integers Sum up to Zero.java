@@ -18,6 +18,6 @@ class Solution {
 }
 
 /*
-    Time Complexity: O(log(n)) where n is the int input n
+    Time Complexity: O(n) where n is the int input n
     Space Complexity: O(1), O(n) counting output array where n is the int input n
 */
