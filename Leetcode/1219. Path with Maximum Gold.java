@@ -27,6 +27,6 @@ class Solution {
 }
 
 /*
-    Time Complexity: O(n*m*4^(n*m)) where n is the number of nodes in the tree of the longest height between root1 and root2
+    Time Complexity: O(n*m*4^(n*m)) where n is the number of rows and m is the number of columns in the input matrix grid
     Space Complexity: O(1) auxiliary space, O(n*m) stack space
 */
