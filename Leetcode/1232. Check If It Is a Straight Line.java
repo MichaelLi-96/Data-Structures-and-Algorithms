@@ -13,6 +13,17 @@ class Solution {
     }
 }
 
+class Solution {
+    public boolean checkStraightLine(int[][] coordinates) {
+        for(int i = 2; i < coordinates.length; i++) {
+            if(((double)(coordinates[1][0] - coordinates[0][0]) * (coordinates[i][1] - coordinates[0][1])) != ((double)(coordinates[1][1] - coordinates[0][1]) * (double)(coordinates[i][0] - coordinates[0][0]))) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
 /*
     Time Complexity: O(n) where n is the length of the input int matrix coordinates
     Space Complexity: O(1)
